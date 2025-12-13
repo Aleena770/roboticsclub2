@@ -1,3 +1,34 @@
+/* Sponsors section centering and layout */
+.sponsors-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px 48px;
+  margin-top: 32px;
+}
+.sponsor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255,255,255,0.04);
+  border-radius: 16px;
+  padding: 24px 20px 16px 20px;
+  min-width: 160px;
+  max-width: 200px;
+  box-shadow: 0 2px 12px #0001;
+}
+.sponsor-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+.sponsor-card h4 {
+  margin: 0;
+  font-size: 1.1em;
+  color: #fff;
+  text-align: center;
+}
 /* ===============================================================
   🤖 **COPILOT INSTRUCTIONS FOR custom.css** 🤖
   ================================================================
@@ -17,13 +48,7 @@
 */
 
 
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-STUDENT CUSTOMIZATION FILE
-This is where you make your design changes!
-Experiment with colors, typography, spacing, and component styles.
-
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 /* ==========================================================================
    DESIGN SYSTEM - CUSTOMIZE YOUR COLORS & BRAND
@@ -403,4 +428,13 @@ hr {
   color: var(--primary-25);
   font-style: normal;
   font-weight: 500;
+}
+
+/* Centered student quote in dark section */
+.student-quote-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }

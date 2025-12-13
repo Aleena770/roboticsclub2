@@ -1,3 +1,16 @@
+/* Hide mobile nav by default except when toggled */
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mobile-nav {
+    display: block;
+  }
+  .desktop-nav {
+    display: none;
+  }
+}
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 STUDENT CUSTOMIZATION FILE
@@ -10,16 +23,16 @@ Experiment with colors, typography, spacing, and component styles.
    DESIGN SYSTEM - CUSTOMIZE YOUR COLORS & BRAND
    ========================================================================== */
 
-:root {
-  --primary-100: #3A4E6A;
-  --primary-80: #486284;
-  --primary-50: #9CB0C9;
-  --primary-25: #CED7E4;
-  --grey: #EBEFF4;
-  --white: #fff;
-  
-  /* You can add more custom colors here */
 
+:root {
+  --primary-100: #6B47E2; /* Dark purple */
+  --primary-80: #8A78E0;  /* Light purple */
+  --primary-50: #B6A9F2;  /* Extra light purple (optional) */
+  --primary-25: #E6E2F8;  /* Very light purple (optional) */
+  --grey: #F6F6FA;        /* Soft background grey */
+  --white: #fff;
+  --font-dark: #56419B;   /* Font color for white bg */
+  --font-light: #fff;     /* Font color for purple bg */
 }
 
 
@@ -29,15 +42,18 @@ Experiment with colors, typography, spacing, and component styles.
    TYPOGRAPHY - CUSTOMIZE FONTS & TEXT STYLES
    ========================================================================== */
 
+
 body {
-  color: var(--primary-80);
+  color: var(--font-dark);
+  background: var(--white);
   /* font-family is set in framework.css but you can override it here if needed */
 }
 
 /* Heading Styles - Customize sizes, colors, spacing */
+
 h1, h2, h3, h4, h5, h6 { 
   line-height: 1.1;
-  color: var(--primary-80);
+  color: var(--primary-100);
   /* Add your custom heading styles here */
 }
 
@@ -69,10 +85,11 @@ h6 {
 }
 
 /* Paragraph Styles */
+
 p {
   font-size: 18px;
   line-height: 1.5;
-  color: var(--primary-80);
+  color: var(--font-dark);
   /* Try adjusting: line-height, letter-spacing, margin-bottom */
 }
 
@@ -102,9 +119,10 @@ section div+div {
    ========================================================================== */
 
 /* Basic Link Styles */
+
 a {
   text-decoration: none;
-  color: var(--primary-80);
+  color: var(--primary-100);
   transition: all 300ms;
   /* Try adding: border-bottom, font-weight changes, etc. */
 }
@@ -163,8 +181,9 @@ header nav a {
   /* Try adding: text-transform, font-weight, padding for button-style nav */
 }
 
+
 header nav a.active {
-  border-bottom: 2px solid var(--primary-80);
+  border-bottom: 2px solid var(--primary-100);
   padding-bottom: 2px;
 }
 
@@ -181,15 +200,15 @@ header nav a.active {
   padding: var(--spacing8x3);
 }
 
+
 #hero-image h1 {
   text-align: center;
-  color: var(--white);
+  color: var(--font-light);
   margin: 0; 
-
 }
 
 #hero-image p {
-  color: var(--white);
+  color: var(--font-light);
   margin: 0; 
 }
 
@@ -207,8 +226,9 @@ header nav a.active {
 
 
 /* Light background wrapper - extends to viewport edges */
+
 .light-bg-wrapper {
-  background: var(--grey);
+  background: var(--white);
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
@@ -218,8 +238,10 @@ header nav a.active {
 
 /* Callout */
 
+
 .callout {
-  background: var(--grey);
+  background: var(--primary-80);
+  color: var(--font-light);
 }
 
 .callout div {
@@ -297,16 +319,17 @@ footer nav, footer p {
    COMPONENTS - CUSTOMIZE REUSABLE ELEMENTS
    ========================================================================== */
 
+
 .dark-bg-wrapper h2,
 .dark-bg-wrapper h3,
 .dark-bg-wrapper h4,
 .dark-bg-wrapper p {
-  color: var(--white);
+  color: var(--font-light);
 }
 
 .dark-bg-wrapper a.button {
-  border: 2px solid var(--white);
-  color: var(--white);
+  border: 2px solid var(--font-light);
+  color: var(--font-light);
 } 
 
 
@@ -318,12 +341,13 @@ hr {
 }
 
 /* Icon with Text Component */
+
 .icon-with-text i {
-  background: var(--grey);
+  background: var(--primary-25);
   padding: 17px 16px 23px;
   border-radius: 200px;
   font-size: 30px;
-  color: var(--primary-80);
+  color: var(--primary-100);
   /* Try customizing: colors, sizing, border-radius, box-shadow */
 }
 
